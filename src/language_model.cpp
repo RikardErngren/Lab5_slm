@@ -46,7 +46,7 @@ public:
         
         for (int i=0; i < n-k; i++) {
             std::string k_gram = language.substr(i, k); // substr(index, length)
-            char next_char = language[i+1];
+            char next_char = language[i+k];
             transition_freqs[k_gram][next_char] += 1.0f / k_gram_count;
         }
     }
