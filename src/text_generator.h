@@ -1,6 +1,7 @@
 #pragma once
 
-#include <language_model.h>
+#include "language_model.h"
+
 #include <string>
 #include <random>
 
@@ -10,12 +11,16 @@
 class TextGenerator {
 private: 
     LanguageModel slm;
+    int text_length;
 
 public:
-    TextGenerator(LanguageModel slm) {}
+    TextGenerator(const LanguageModel& slm, const int text_length);
 
-    std::string generate_text() {}
+    void generate_text();
 
-    std::string choose_starting_k_gram() {}
+private:
+    std::string choose_k_gram();
+
+    char sample_next_character(std::string k_gram);
 
 };
