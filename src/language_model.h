@@ -1,5 +1,11 @@
+// prevents stuff from being declared several times. For example if #include <string> is
+// declared in this file and main.cpp
+#pragma once
+
 #include <map>
 #include <string>
+
+
 
 class LanguageModel {
 private:

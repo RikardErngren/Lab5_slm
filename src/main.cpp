@@ -3,5 +3,6 @@
 
 
 //Output text length is not relevant to the language model, that's handled by the text_generator
-int main(k, filename, text_length) {
+int main(int k, std::string filename, int text_length) {
+
 }
