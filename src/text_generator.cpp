@@ -1,8 +1,5 @@
 #include "text_generator.h"
-
-#include <string>
-#include <random>
-#include <iostream>
+#include "language_model.h"
 
 
 
