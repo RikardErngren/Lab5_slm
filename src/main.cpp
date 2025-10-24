@@ -36,5 +36,4 @@ int main(int argc, char* argv[]) {
     slm.find_transition_freqs(language);
     TextGenerator generator(slm, text_length);
     generator.generate_text();
-
 }

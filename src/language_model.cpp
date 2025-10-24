@@ -26,11 +26,11 @@ we slide over the text and check what comes next for each occurence of a key. Bu
 about the existence of substr which seems like a superior way of doing this.
 
 The reason it's not normalized immediately is because you have to keep track and divide
-by the right number as each k gram have a different number of next characters, i.e. a
+by the right number as each k gram has a different number of next characters, i.e. a
 different normalizer. */
 void LanguageModel::find_transition_freqs(std::string language) {
     int n = language.length();
-    std::map<std::string, std::map<char, float>> transition_counts; // temporary, for absolute frequency
+    std::map<std::string, std::map<char, float>> transition_counts; // temporary variable for absolute frequency
     
     for (int i=0; i < n-k; i++) {
         std::string k_gram = language.substr(i, k); // substr(index, length)
@@ -71,3 +71,14 @@ void LanguageModel::print_filename() {
 void LanguageModel::print_k() {
     std::cout << k << std::endl;
 }
+
+std::map<std::string, float> LanguageModel::get_k_gram_freqs() {
+    return k_gram_freqs;
+}
+
+std::map<std::string, std::map<char, float>> LanguageModel::get_transition_freqs() {
+    return transition_freqs;
+}
+
+
+

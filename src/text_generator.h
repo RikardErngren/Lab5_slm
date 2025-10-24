@@ -8,7 +8,6 @@
 
 
 
-
 class TextGenerator {
 private: 
     LanguageModel slm;

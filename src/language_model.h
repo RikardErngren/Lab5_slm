@@ -12,10 +12,10 @@ class LanguageModel {
 private:
     int k;
     std::string filename;
-
-public:
     std::map<std::string, float> k_gram_freqs;
     std::map<std::string, std::map<char, float>> transition_freqs;
+
+public:
     LanguageModel(int k, std::string filename);
     void find_k_gram_freqs(std::string language);
  
@@ -29,4 +29,7 @@ public:
 
     void print_k();
 
+    std::map<std::string, float> get_k_gram_freqs();
+
+    std::map<std::string, std::map<char, float>> get_transition_freqs();
 };
