@@ -35,4 +35,4 @@ Takes a LanguageModel object and a requested output length for the text to be cr
 My largest issue with the structure of the program comes to light here. We have to call:
 slm.find_k_gram_freqs(language);
 slm.find_transition_freqs(language);
-to actually update these before sending this slm object to the TextGenerator. This is ugly. An improvement could be to have methods in TextGenerator actually call to find these frequencies. Perhaps the getters themselves in language_model.cpp should be the ones to call the find-methods. Luckily the lab didn't specify that you have to write beautiful code so I'm not fixing stuff that already works.
+to actually update these before sending this slm object to the TextGenerator. This is ugly. An improvement could be to have methods in TextGenerator actually call to find these frequencies. Perhaps the getters themselves in language_model.cpp should be the ones to call the find-methods. Luckily the lab didn't specify that you have to write beautiful code so I don't have to fix stuff that already works.

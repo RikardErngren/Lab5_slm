@@ -22,6 +22,7 @@ void TextGenerator::generate_text() {
         k_gram = k_gram.substr(1, (k_gram.length()-1)); 
         k_gram += c;
     }
+    std::cout << std::endl;
 }
 
 std::string TextGenerator::choose_k_gram() {
